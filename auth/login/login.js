@@ -11,15 +11,15 @@ import {
   setDoc,
   getDoc,
   doc,
-} from "../../firebase.js";
+} from "firebase.js";
 const authenticationCheck = () => {
   try {
     let user = localStorage.getItem("user");
     user = JSON.parse(user);
     if (user.type === "user") {
-      window.location.replace("../../user/dashboard/user-dashboard.html");
+      window.location.replace("user/dashboard/user-dashboard.html");
     } else if (user.type === "admin") {
-      window.location.replace("../../admin/dashboard/dashboard.html");
+      window.location.replace("admin/dashboard/dashboard.html");
     }
   } catch (error) {
     console.log(error);
