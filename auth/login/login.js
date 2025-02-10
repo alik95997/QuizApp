@@ -11,7 +11,7 @@ import {
   setDoc,
   getDoc,
   doc,
-} from "./firebase.js";
+} from "../../firebase.js";
 const authenticationCheck = () => {
   try {
     let user = localStorage.getItem("user");
