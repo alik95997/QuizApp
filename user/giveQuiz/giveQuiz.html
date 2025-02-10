@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../giveQuiz/giveQuiz.css">
+
+</head>
+
+<body>
+    <nav class="navigationBar">
+        <div class="logo-div">
+            <a href="../dashboard/user-dashboard.html" class="logo"><span>Quiz</span> master</a>
+        </div>
+        <div>
+            <ul class="nav-list">
+                <li><a href="../createquiz/createquiz.html">LeaderBoard</a></li>
+                <li><a href="../user-scorelist/user-scorelist.html">Score List</a></li>
+                <li><a href="../../user/dashboard/user-dashboard.html">Dashboard</a></li>
+                <li><a href="../../user/user-profile/user-profile.html">Profile</a></li>
+            </ul>
+        </div>
+        <div class="button-group">
+            <button class="button" onclick="signOut()">Sign Out</button>
+            <a href="../user-profile/user-profile.html"><button class="button-white">Your Profile</button></a>
+        </div>
+        <!-- <div class="hamburger-menu">☰</div> -->
+    </nav>
+
+    <section class="container" id="quizContainer">
+        <div class="quistion">
+            <h1 id="questionElement"></h1>
+        </div>
+        <div class="answerCntainer">
+            <ul class="optionElement" id="optionElement">
+
+            </ul>
+        </div>
+        <div class="bottomPart">
+            <p><span id="currentQuesCount">1</span>/<span id="totalQuesCount">10</span></p>
+            <button id="nextBtn" class="button-white" onclick="nextQues()">Next</button>
+        </div>
+    </section>
+
+    <section class="score-container">
+        <ul id="ShowResult">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+</body>
+
+<script src="../giveQuiz/giveQuiz.js" type="module"></script>
+
+</html>

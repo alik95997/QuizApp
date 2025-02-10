@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="createquiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navigationBar">
+        <div class="logo-div">
+            <a href="../dashboard/dashboard.html" class="logo"><span>Quiz</span> master</a>
+        </div>
+        <div>
+            <ul class="nav-list">
+                <li><a href="../../admin/createquiz/createquiz.html">Create Quiz</a></li>
+                <li><a href="../quizlist/quizlist.html">Quiz List</a></li>
+                <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+                <li><a href="../admin-scorelist/scorelist.html">Score List</a></li>
+            </ul>
+        </div>
+        <div class="button-group">
+            <button class="button" onclick="signOut()">Sign Out</button>
+            <button class="button-white"><a href=""></a>Your Profile</a></button>
+        </div>
+    </nav>
+
+    <main>
+     
+        <div class="container">
+            <div class="Questions form-group">
+                <h1>Create Quiz</h1>
+                <div class="form-group">
+                    <!-- <label for="quizTitle">Title</label> -->
+                    <input type="text" id="quizTitle" placeholder="Enter Quiz Title">
+                </div>
+                <div class="form-group">
+                    <!-- <label for="quizTitle">Quiz Category</label> -->
+                    <input type="text" id="quizCategory" placeholder="Enter Quiz Category">
+                </div>
+            </div>
+
+            <div class="form-group ">
+                <h3>Create Questions</h3>
+
+                <!-- <label for="questionText">Question</label> -->
+                <input type="text" id="questionText" placeholder="Enter Question">
+                <div class="options">
+                    <!-- <label for="option1">Option 1</label> -->
+                    <input type="text" id="option1" placeholder="Option 1">
+
+                    <!-- <label for="option2">Option 2</label> -->
+                    <input type="text" id="option2" placeholder="Option 2">
+
+                    <!-- <label for="option3">Option 3</label> -->
+                    <input type="text" id="option3" placeholder="Option 3">
+
+                    <!-- <label for="option4">Option 4</label> -->
+                    <input type="text" id="option4" placeholder="Option 4">
+                </div>
+                <!-- <label for="correctAnswer">Correct Answer</label> -->
+                <input type="text" id="correctAnswer" placeholder="Enter correct Answer" required>
+                <button class="button" onclick="handleQuestions()">Add Question</button>
+
+            </div>
+            <div>
+                <button class="button" onclick="createQuizHandler()">Create Quiz</button>
+            </div>
+        </div>
+
+    </main>
+
+    <p class="instructions">When you select 'Add Question,' the input field will be blank. Once you have entered enough
+        questions, please
+        click 'Create Quiz' to continue.</p>
+
+</body>
+<script src="createquiz.js" type="module"></script>
+
+</html>

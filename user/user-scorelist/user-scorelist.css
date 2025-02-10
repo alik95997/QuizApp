@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mona Sans';
+}
+
+body {
+    background-color: #F6F6F8;
+}
+
+.navigationBar {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    color: #564D49;
+}
+
+a {
+    color: #564D49;
+}
+
+.nav-list li a {
+    text-decoration: none;
+}
+
+.nav-list li a:hover {
+    color: #e25407;
+    text-decoration: underline;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #FF5B05;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.button-group button {
+    padding: 5px 12px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #FF5B05;
+}
+
+.button-group button:hover {
+    background-color: #f55600;
+}
+
+.button {
+    cursor: pointer;
+    padding: 5px 12px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #FF5B05;
+}
+
+.button-group .button-white {
+    background-color: #FFF3EC;
+    color: black;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+}
+
+.button-group .button-white:hover {
+    background-color: #d9d9d9;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+.tableSection {
+    width: 95%;
+    margin: 0 auto;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+}
+
+.tableSection h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+table.customTable {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border: 2px solid #564D49;
+    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table.customTable td,
+table.customTable th {
+    padding: 12px;
+    border: 2px solid #FF5B05;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+table.customTable thead {
+    background-color: #FF5B05;
+    color: #FFFFFF;
+    left: 0;
+    position: sticky;
+}
+
+table.customTable td {
+    word-wrap: break-word;
+    max-width: 200px;
+    hyphens: auto;
+}
+
+.tableSection::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tableSection::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.tableSection::-webkit-scrollbar-thumb {
+    background: #FF5B05;
+    border-radius: 4px;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loader {
+    display: none;
+    margin: 50px auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width:768px) {
+    .tableSection {
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .tableSection h1 {
+        font-size: 1.5rem;
+        padding: 0 15px;
+    }
+
+    table.customTable td,
+    table.customTable th {
+        padding: 2px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    table.customTable {
+        min-width: 400px;
+    }
+
+    table.customTable td,
+    table.customTable th {
+        padding: 2px;
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigationBar {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 10px 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .button-group button {
+        padding: 4px 10px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-list {
+        gap: 8px;
+    }
+}

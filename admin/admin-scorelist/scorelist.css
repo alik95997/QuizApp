@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mona Sans';
+}
+
+body {
+    background-color: #F6F6F8;
+}
+
+.navigationBar {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    color: #564D49;
+}
+
+a {
+    color: #564D49;
+}
+
+.nav-list li a {
+    text-decoration: none;
+}
+
+.nav-list li a:hover {
+    color: #e25407;
+    text-decoration: underline;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #FF5B05;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.button-group button {
+    padding: 5px 12px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #FF5B05;
+}
+
+.button-group button:hover {
+    background-color: #f55600;
+}
+
+.button {
+    cursor: pointer;
+    padding: 5px 12px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #FF5B05;
+}
+
+.button-group .button-white {
+    background-color: #FFF3EC;
+    color: black;
+    border: 1px solid #cccccc;
+}
+
+.button-group .button-white:hover {
+    background-color: #d9d9d9;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loader {
+    display: none;
+    margin: 50px auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tableSection {
+    width: 95%;
+    margin: 0 auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+}
+
+.tableSection h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+table.customTable {
+    width: 100%;
+    min-width: 600px;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border: 2px solid #564D49;
+    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table.customTable td,
+table.customTable th {
+    border: 2px solid #FF5B05;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+table.customTable thead {
+    background-color: #FF5B05;
+    color: #FFFFFF;
+    position: sticky;
+    left: 0;
+}
+
+.tableSection::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tableSection::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.tableSection::-webkit-scrollbar-thumb {
+    background: #FF5B05;
+    border-radius: 4px;
+}
+
+table.customTable td {
+    word-wrap: break-word;
+    max-width: 200px;
+    hyphens: auto;
+}
+
+.custom-select {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.custom-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    font-size: 18px;
+    padding: 5px 10px 5px 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #C4D1EB;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 3px 3px 2px 0px #E2E2E2;
+}
+
+.custom-select select:focus {
+    background: #F2F2F2;
+    border: 1px solid #FF5B05;
+    border-radius: 5px;
+}
+
+.custom-select::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: #000000;
+    clip-path: polygon(8% 17%, 0% 25%, 50% 84%, 100% 25%, 92% 17%, 50% 65%);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .tableSection {
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .tableSection h1 {
+        font-size: 1.5rem;
+        padding: 0 15px;
+    }
+
+    table.customTable td,
+    table.customTable th {
+        padding: 2px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigationBar {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 10px 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .button-group button {
+        padding: 4px 10px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-list {
+        gap: 8px;
+    }
+}

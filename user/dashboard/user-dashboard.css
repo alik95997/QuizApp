@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mona Sans';
+}
+
+body {
+    background-color: #F6F6F8;
+}
+
+.navigationBar {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    color: #564D49;
+}
+
+a {
+    color: #564D49;
+}
+
+.nav-list li a {
+    text-decoration: none;
+}
+
+.nav-list li a:hover {
+    color: #e25407;
+    text-decoration: underline;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #FF5B05;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+.button-group button {
+    padding: 5px 12px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #FF5B05;
+}
+
+.button-group button:hover {
+    background-color: #f55600;
+}
+
+.button {
+    cursor: pointer;
+    padding: 5px 12px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #FF5B05;
+}
+
+.button-group .button-white {
+    background-color: #FFF3EC;
+    color: black;
+    border: 1px solid #cccccc;
+}
+
+.button-group .button-white:hover {
+    background-color: #d9d9d9;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #FF5B05;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul img {
+    width: 30px;
+}
+
+.sidebar ul li {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.mainContent {
+    flex-grow: 1;
+    padding: 0px 20px;
+}
+
+.mainContent h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    width: 300px;
+    background-color: #FFE4D9;
+    border-radius: 25px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.quiz:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    border-color: #FF5B05;
+    background-color: #FFD4C2;
+}
+
+.quiz .quiz-category {
+    font-size: 0.8rem;
+}
+
+.quiz img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.quiz p {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.5;
+}
+
+.cardListingContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loader {
+    display: none;
+    margin: 50px auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tableSection {
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+}
+
+.tableSection h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+table.customTable {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border: 2px solid #564D49;
+    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 100px;
+}
+
+table.customTable td,
+table.customTable th {
+    padding: 12px;
+    border: 2px solid #FF5B05;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+table.customTable thead {
+    background-color: #FF5B05;
+    color: #FFFFFF;
+    left: 0;
+    position: sticky;
+}
+
+table.customTable td {
+    word-wrap: break-word;
+    max-width: 200px;
+    hyphens: auto;
+}
+
+.tableSection::-webkit-scrollbar {
+    height: 8px;
+}
+
+.tableSection::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.tableSection::-webkit-scrollbar-thumb {
+    background: #FF5B05;
+    border-radius: 4px;
+}
+
+@media screen and (max-width:768px) {
+    .tableSection {
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .tableSection h1 {
+        font-size: 1.5rem;
+        padding: 0 15px;
+    }
+
+    table.customTable td,
+    table.customTable th {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    table.customTable {
+        min-width: 100px;
+    }
+
+    table.customTable td,
+    table.customTable th {
+        padding: 2px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navigationBar {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .nav-list {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .button-group {
+        gap: 10px;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .sidebar ul li {
+        margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+        font-size: 1rem;
+    }
+
+    .mainContent {
+        padding: 20px;
+    }
+
+    .quiz {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .button-group button {
+        padding: 4px 10px;
+        font-size: 14px;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 200px;
+        height: 100vh;
+        left: -200px;
+        transition: 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .mainContent {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .quiz {
+        padding: 15px;
+    }
+
+    .quiz img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 15px;
+        z-index: 1001;
+        cursor: pointer;
+    }
+}

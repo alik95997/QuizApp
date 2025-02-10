@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mona Sans';
+}
+
+body {
+    background-color: #F6F6F8;
+}
+
+.auth-header h1 {
+    color: #2c3e50;
+}
+
+.auth-header p {
+    color: #34495e;
+}
+
+.form-control {
+    border: 1px solid #FF5B05;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 8px #FF5B05;
+    border-color: #FF5B05;
+}
+
+.btn {
+    background-color: #FF5B05;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #fa7f3d;
+}
+
+.bg-form-container {
+    background-color: #ffffff;
+    border: 1px solid #dfe6e9;
+}
+
+.form-text a {
+    color: #FF5B05;
+}
+
+.form-text a:hover {
+    color: #2980b9;
+}
+
+.account-check-text a:hover {
+    text-decoration: underline !important;
+}
+
+.container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:768px) {
+    .img-div {
+        display: none;
+    }
+    .container{
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+}

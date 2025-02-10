@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin/dashboard/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navigationBar">
+        <div class="logo-div">
+            <a href="../dashboard/dashboard.html" class="logo"><span>Quiz</span> master</a>
+        </div>
+        <div>
+            <ul class="nav-list">
+                <li><a href="../createquiz/createquiz.html">Create Quiz</a></li>
+                <li><a href="../quizlist/quizlist.html">Quiz List</a></li>
+                <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+                <li><a href="../admin-scorelist/scorelist.html">Score List</a></li>
+            </ul>
+        </div>
+        <div class="button-group">
+            <button class="button" onclick="signOut()">Sign Out</button>
+            <a href="../admin-profile/admin-profile.html"><button class="button-white">Your Profile</button></a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-child hero-text">
+            <h1>Publish Interactive and <span>Exciting Quizzes</span></h1>
+            <p>Explore the exciting world of quiz creation! Engage your audience with interactive and entertaining
+                quizzes. Whether it's for fun, education, or engagement, making quizzes has never been easier."</p>
+            <a href="../createquiz/createquiz.html">
+                <button class="button">Create Quiz</button>
+            </a>
+        </div>
+        <div class="hero-child"><img src="../../images/quiz.png" alt=""></div>
+    </section>
+
+    <section class="quiz-list">
+        <!-- <div class="quiz">
+            <p>Title</p>
+            <button class="button">Active</button>
+        </div>
+        <div class="quiz">
+            <p>Title</p>
+            <button class="button">Active</button>
+        </div> -->
+    </section>
+</body>
+<script src="./dashboard.js" type="module"></script>
+
+</html>

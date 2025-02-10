@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mona Sans';
+}
+
+body {
+    background-color: #F6F6F8;
+}
+
+.auth {
+    min-width: 350px;
+}
+
+.auth-header h1 {
+    color: #2c3e50;
+}
+
+.auth-header p {
+    color: #34495e;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #FF5B05;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 8px #FF5B05;
+    border-color: #FF5B05;
+}
+
+.btn {
+    background-color: #FF5B05;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #FF5B05;
+}
+
+/* .container-for-signup {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+} */
+.container-for-signup {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.bg-form-container {
+    background-color: #ffffff;
+    border: 1px solid #dfe6e9;
+}
+
+.form-text a {
+    color: #FF5B05;
+}
+
+.form-text a:hover {
+    color: #FF5B05;
+}
+
+.account-check-text a:hover {
+    text-decoration: underline !important;
+
+}
+
+@media screen and (max-width:768px) {
+    .signup-img-div {
+        display: none;
+    }
+
+    .container-for-signup {
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+}
