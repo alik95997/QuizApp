@@ -21,9 +21,9 @@ const authenticationCheck = () => {
     user = JSON.parse(user);  // Parse the user data
     
     if (user && user.type === "user") {
-      window.location.replace(`${window.location.origin}/user/dashboard/user-dashboard.html`);
+      window.location.replace(`${window.location.origin}quizApp/user/dashboard/user-dashboard.html`);
     } else if (user && user.type === "admin") {
-      window.location.replace(`${window.location.origin}/admin/dashboard/dashboard.html`);
+      window.location.replace(`${window.location.origin}quizApp/admin/dashboard/dashboard.html`);
     }
   } catch (error) {
     console.log("Error:", error);  // Log error to debug issues with localStorage or JSON
