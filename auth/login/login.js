@@ -17,7 +17,7 @@ const authenticationCheck = () => {
     let user = localStorage.getItem("user");
     user = JSON.parse(user);
     if (user.type === "user") {
-      window.location.replace("/quizApp/user/userdashboard/userdashboard.html");
+      window.location.replace("user/userdashboard/userdashboard.html");
     } else if (user.type === "admin") {
       window.location.replace("admin/dashboard/dashboard.html");
     }
