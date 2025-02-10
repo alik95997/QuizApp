@@ -11,7 +11,7 @@ import {
   setDoc,
   getDoc,
   doc,
-} from "firebase.js";
+} from "./firebase.js";
 const authenticationCheck = () => {
   try {
     let user = localStorage.getItem("user");
@@ -25,7 +25,7 @@ const authenticationCheck = () => {
     console.log(error);
   }
 };
-authenticationCheck();
+// authenticationCheck();
 const signIn = async () => {
   try {
     const email = document.querySelector("#email");
@@ -46,10 +46,10 @@ const signIn = async () => {
     localStorage.setItem("user", JSON.stringify(userData));
     if (userData.type === "admin") {
       alert("signed In");
-      window.location.replace("../../admin/dashboard/dashboard.html");
+      window.location.replace("admin/dashboard/dashboard.html");
     } else {
       alert("signed In");
-      window.location.replace("../../user/dashboard/user-dashboard.html");
+      window.location.replace("user/dashboard/user-dashboard.html");
     }
   } catch (error) {
     alert("error", error.message);
