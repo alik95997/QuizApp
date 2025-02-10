@@ -25,7 +25,7 @@ const authenticationCheck = () => {
     console.log(error);
   }
 };
-// authenticationCheck();
+ authenticationCheck();
 const signIn = async () => {
   try {
     const email = document.querySelector("#email");
