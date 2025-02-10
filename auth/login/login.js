@@ -17,20 +17,19 @@ import {
 const authenticationCheck = () => {
   try {
     let user = localStorage.getItem("user");
-    if (user) {
-      user = JSON.parse(user);
-      if (user.type === "admin") {
-        alert("signed In");
-        window.location.replace("admin/dashboard/dashboard.html");
-      } else {
-        alert("signed In");
-        window.location.replace("user/dashboard/user-dashboard.html");
-      }
+    console.log("User data:", user);  // Check the user data in console
+    user = JSON.parse(user);  // Parse the user data
+    
+    if (user && user.type === "user") {
+      window.location.replace(`${window.location.origin}/user/dashboard/user-dashboard.html`);
+    } else if (user && user.type === "admin") {
+      window.location.replace(`${window.location.origin}/admin/dashboard/dashboard.html`);
     }
   } catch (error) {
-    console.log("Error in authentication check:", error);
+    console.log("Error:", error);  // Log error to debug issues with localStorage or JSON
   }
 };
+
 authenticationCheck();
 
 // Sign-in function
