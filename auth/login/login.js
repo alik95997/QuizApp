@@ -12,20 +12,28 @@ import {
   getDoc,
   doc,
 } from "../../firebase.js";
+
+// Function to check authentication on page load
 const authenticationCheck = () => {
   try {
     let user = localStorage.getItem("user");
-    user = JSON.parse(user);
-    if (user.type === "user") {
-      window.location.replace("user/userdashboard/userdashboard.html");
-    } else if (user.type === "admin") {
-      window.location.replace("admin/dashboard/dashboard.html");
+    if (user) {
+      user = JSON.parse(user);
+      if (user.type === "admin") {
+        alert("signed In");
+        window.location.replace("admin/dashboard/dashboard.html");
+      } else {
+        alert("signed In");
+        window.location.replace("user/dashboard/user-dashboard.html");
+      }
     }
   } catch (error) {
-    console.log(error);
+    console.log("Error in authentication check:", error);
   }
 };
- authenticationCheck();
+authenticationCheck();
+
+// Sign-in function
 const signIn = async () => {
   try {
     const email = document.querySelector("#email");
@@ -38,23 +46,33 @@ const signIn = async () => {
     const uid = userAuth.user.uid;
     const docRef = doc(db, "users", uid);
     const docSnap = await getDoc(docRef);
-    const userData = {
-      ...docSnap.data(),
-      uid,
-    };
 
-    localStorage.setItem("user", JSON.stringify(userData));
-    if (userData.type === "admin") {
-      alert("signed In");
-      window.location.replace("admin/dashboard/dashboard.html");
+    // Check if user document exists and extract data
+    if (docSnap.exists()) {
+      const userData = {
+        ...docSnap.data(),
+        uid,
+      };
+
+      // Store user data in localStorage
+      localStorage.setItem("user", JSON.stringify(userData));
+
+      // Redirect based on user type
+      if (userData.type === "admin") {
+        alert("signed In");
+        window.location.replace("admin/dashboard/dashboard.html");
+      } else {
+        alert("signed In");
+        window.location.replace("user/dashboard/user-dashboard.html");
+      }
     } else {
-      alert("signed In");
-      window.location.replace("user/dashboard/user-dashboard.html");
+      alert("No user document found.");
     }
   } catch (error) {
-    alert("error", error.message);
-    console.log(error.message, error);
+    alert("Error: " + error.message);
+    console.log("Error during sign-in:", error.message, error);
   }
 };
+
 window.signIn = signIn;
 window.authenticationCheck = authenticationCheck;
